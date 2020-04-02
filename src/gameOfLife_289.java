@@ -8,7 +8,7 @@
  */
 
 /**
- * ¡´¡µ
+ * ã€ˆã€‰
  *
  * @author 924905699
  * @create 2020/4/2
@@ -30,7 +30,7 @@ class Solution {
                 for (int i=0;i<3;i++){
                     for (int j=0;j<3;j++){
                         if(!(temp[i]==0&&temp[j]==0)){
-                            //ÅÅ³ý×ÔÉí×´Ì¬
+                            //æŽ’é™¤è‡ªèº«çŠ¶æ€
                             int r=row+temp[i];
                             int c=col+temp[j];
                             if ((r < m && r >= 0) && (c < n && c >= 0) && (initial[r][c] == 1)) live++;
@@ -39,12 +39,12 @@ class Solution {
                 }
                 if ((initial[row][col] == 1) && (live < 2 || live > 3)) {
                     board[row][col] = 0;
-//                    System.out.println("¹æÔò1»ò3");
+//                    System.out.println("è§„åˆ™1æˆ–3");
                 }
-                // ¹æÔò 4
+                // è§„åˆ™ 4
                 if (initial[row][col] == 0 && live == 3) {
                     board[row][col] = 1;
-//                    System.out.println("¹æÔò4") ;
+//                    System.out.println("è§„åˆ™4") ;
                 }
             }
         }
