@@ -30,7 +30,7 @@ class Solution {
                 for (int i=0;i<3;i++){
                     for (int j=0;j<3;j++){
                         if(!(temp[i]==0&&temp[j]==0)){
-                            //排除自身状态
+                            //
                             int r=row+temp[i];
                             int c=col+temp[j];
                             if ((r < m && r >= 0) && (c < n && c >= 0) && (initial[r][c] == 1)) live++;
@@ -39,12 +39,12 @@ class Solution {
                 }
                 if ((initial[row][col] == 1) && (live < 2 || live > 3)) {
                     board[row][col] = 0;
-//                    System.out.println("规则1或3");
+//                    System.out.println("1or3");
                 }
                 // 规则 4
                 if (initial[row][col] == 0 && live == 3) {
                     board[row][col] = 1;
-//                    System.out.println("规则4") ;
+//                    System.out.println("4") ;
                 }
             }
         }
